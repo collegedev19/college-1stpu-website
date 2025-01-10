@@ -3,35 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College 1st PU Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"></script>
-    <script src="script.js" defer></script>
+    <title>1st PU Resources</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>College 1st PU Website</h1>
-        <button id="theme-toggle">Toggle Dark Mode</button>
+        <div class="navbar">
+            <div class="logo">
+                <h1>1st PU Resources</h1>
+            </div>
+            <div class="nav-links">
+                <button id="themeToggle" class="theme-toggle">🌙</button>
+                <button class="btn">Login</button>
+                <button class="btn">Sign Up</button>
+            </div>
+        </div>
     </header>
 
-    <section id="subjects">
-        <h2>Choose a Subject to Upload</h2>
-        <ul>
-            <li><a href="#" onclick="setSubject('kannada')">Kannada</a></li>
-            <li><a href="#" onclick="setSubject('english')">English</a></li>
-            <li><a href="#" onclick="setSubject('phy')">Physics</a></li>
-            <li><a href="#" onclick="setSubject('chem')">Chemistry</a></li>
-            <li><a href="#" onclick="setSubject('cs')">Computer Science</a></li>
-            <li><a href="#" onclick="setSubject('math')">Math</a></li>
-        </ul>
-    </section>
+    <main>
+        <div class="tabs">
+            <button class="tab-btn active" onclick="changeTab('resources')">Resources</button>
+            <button class="tab-btn" onclick="changeTab('study-journal')">Study Journal</button>
+        </div>
 
-    <section id="upload-form">
-        <h2>Upload Files</h2>
-        <input type="file" id="file-input">
-        <button onclick="uploadFile()">Upload</button>
-        <p id="status"></p>
-    </section>
+        <div id="resources" class="tab-content active">
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="subjectSelect">Select Subject</label>
+                    <select id="subjectSelect">
+                        <option value="kannada">Kannada</option>
+                        <option value="english">English</option>
+                        <option value="physics">Physics</option>
+                        <option value="chemistry">Chemistry</option>
+                        <option value="cs">Computer Science</option>
+                        <option value="math">Mathematics</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="resourceSelect">Select Resource Type</label>
+                    <select id="resourceSelect">
+                        <option value="modal">Modal Papers</option>
+                        <option value="exam">Exam Papers</option>
+                        <option value="hw">Homework</option>
+                        <option value="cw">Classwork</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fileUpload">Upload File (Max: 200MB)</label>
+                    <input type="file" id="fileUpload" />
+                </div>
+                <button id="uploadBtn" class="btn">Upload Resource</button>
+            </div>
+            <div id="resourcesDisplay" class="resources-display">
+                <!-- Resources will be displayed here -->
+            </div>
+        </div>
+
+        <div id="study-journal" class="tab-content">
+            <div class="journal-entry">
+                <h3>Journal Title</h3>
+                <p>Journal Content</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 1st PU Resources</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
