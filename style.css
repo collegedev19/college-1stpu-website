@@ -1,53 +1,123 @@
-/* General Styles */
+/* Default styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
+    background-color: #f4f4f9;
+    color: #333;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #333;
+    color: #fff;
     padding: 10px;
-    text-align: center;
-    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
 }
 
 button {
-    padding: 10px 15px;
-    margin-top: 10px;
+    padding: 8px 16px;
+    font-size: 16px;
     cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
 }
 
-#subjects ul {
-    list-style-type: none;
-    padding: 0;
+button:hover {
+    background-color: #0056b3;
 }
 
-#subjects li {
-    margin: 10px 0;
+.tab-btn {
+    padding: 12px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 10px;
 }
 
-#upload-form {
+.tab-btn.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.form-container {
     padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
 
-/* Dark Mode Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.resources-display {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Dark Mode */
 body.dark-mode {
     background-color: #333;
     color: white;
 }
 
-button.dark-mode {
-    background-color: #4CAF50;
-    color: white;
+body.dark-mode header {
+    background-color: #222;
 }
 
-#subjects a {
-    color: #4CAF50;
+body.dark-mode .tab-btn {
+    background-color: #444;
 }
 
-body.dark-mode #subjects a {
-    color: #fff;
+body.dark-mode .tab-btn.active {
+    background-color: #007bff;
 }
+
+body.dark-mode .form-container {
+    background-color: #444;
+}
+
+body.dark-mode .btn {
+    background-color: #28a745;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #218838;
+}
+
