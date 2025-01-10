@@ -1,0 +1,53 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#subjects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#subjects li {
+    margin: 10px 0;
+}
+
+#upload-form {
+    padding: 20px;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+button.dark-mode {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#subjects a {
+    color: #4CAF50;
+}
+
+body.dark-mode #subjects a {
+    color: #fff;
+}
